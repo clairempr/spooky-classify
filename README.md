@@ -15,7 +15,6 @@ are quite a few more samples from Poe than from Lovecraft or Shelley. Rather tha
 and Shelley samples, I chose to resample using imbalanced-learn.
  ![Author distribution](images/authors_dist.png) 
 
-
 The model I finally arrived at is a VotingClassifier using as estimators the three classifiers with 
 predict_proba support that had the highest accuracy. The VotingClassifier performed slightly better 
 than the individual models, which were MultinomialNB, BernoulliNB, and MLPClassifier. 
