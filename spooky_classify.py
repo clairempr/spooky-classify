@@ -1,4 +1,7 @@
-# use scikit-learn to classify text for Kaggle Spooky Authors competition
+# Use scikit-learn and spaCy to classify text for
+# Kaggle Spooky Author Identification competition
+# Claire Pritchard, January 2018
+
 import csv
 from imblearn.combine import SMOTETomek
 from imblearn.pipeline import Pipeline as Pipeline_imb
@@ -225,7 +228,6 @@ def tokenize(text, lemmatize):
         # tokens
         tokens = [token.text for token in spacy_tokenizer(text)]
     return tokens
-
 
 
 main()
