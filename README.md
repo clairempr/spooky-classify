@@ -12,7 +12,7 @@ test.csv.
 
 As you can see when plotting the distribution of author labels in the training dataset with matplotlib, there 
 are quite a few more samples from Poe than from Lovecraft or Shelley. 
- ![Author distribution](images/authors_dist.png)
+ ![Author distribution](images/authors_dist.png) 
 Rather than trying to find more Lovecraft and Shelley samples, I chose to resample using imbalanced-learn.
 
 The model I finally arrived at is a VotingClassifier using as estimators the three classifiers with 
@@ -28,12 +28,12 @@ held out for testing.
 
 Making predictions for the held out test data resulted in the following confusion matrix and 
 classification report and confusion matrix:
-            | precision | recall | f1-score | support
-------------|-----------|--------|----------|--------
-        EAP |       0.83|    0.92|      0.87|    1999
-        HPL |       0.92|    0.80|      0.86|    1388
-        MWS |       0.86|    0.86|      0.86|    1508
-avg / total |       0.87|    0.87|      0.86|    4895                         
+||precision|recall|f1-score|support|
+|--|--|--|--|--|
+|EAP|0.83|0.92|0.87|1999
+|HPL|0.92|0.80|0.86|1388
+|MWS|0.86|0.86|0.86|1508
+|avg / total|0.87|0.87|0.86|4895                        
                        
 
 ![Confusion matrix](images/confusion_matrix.png)
